@@ -30,17 +30,56 @@ main{
     backdrop-filter: blur(1em);
 }
 
-.all_croche_divs {
-    padding: 0 1em 0.8em 1em;
+
+.carrossel {
+    width: 450px;
+    height: 350px;
+    outline: 0.3em solid #A47C2A;
+    overflow: hidden;
+    margin: 1em 1.5em;
+    border-radius: 0.5em;
+}
+
+.carrossel .croche_list {
     display: flex;
-    flex-direction: column;
-    margin: auto;
+    list-style: none;
+    width: 4050px;
+    height: 350px;
+    
+    
+}
+
+.croche_list > li {
+    position: relative;
+    animation: slide 20s infinite ease-out;
+}
+
+@keyframes slide {
+    0%{left: 0px;}
+    5.5%{left:0px;}
+    11%{left:-450px;}
+    15.5%{left:-450px;}
+    22%{left:-900px}
+    27.5%{left:-900px;}
+    33%{left:-1350px;}
+    38.5%{left:-1350px;}
+    44%{left:-1800px;}
+    49.5%{left:-1800px;}
+    55%{left:-2250px;}
+    60.5%{left:-2250px;}
+    66%{left:-2700px;}
+    71.5%{left:-2700px;}
+    77%{left:-3150px;}
+    82.5%{left:-3150px;}
+    88%{left:-3600px;}
+    93.5%{left:-3600px;}
+    100%{left: 0;}
+    
 }
 
 .croche_imgs {
-    border-radius: 0.5em;
-    margin: 0.2em;
-    /*width: 14em;*/
+    width: 450px;
+    height: 350px;
 }
 
 .croche_imgs:hover{
@@ -71,6 +110,7 @@ main{
 .instagram_logo, .whatsapp_logo {
     width: 1.1em;
     margin-right: 0.2em;
+    filter:drop-shadow(0.02em 0.02em 0.2em black)
 }
 
 .social_links {
@@ -84,6 +124,7 @@ main{
 
 .instagram_span, .whatsapp_span {
     font-weight: bold;
+    text-shadow: 0.02em 0.02em 0.2em black;
 }
 
 .profile_pic{
@@ -97,13 +138,50 @@ main{
 
 @media (max-width: 699px){
 
-    .croche_imgs {
+    .carrossel {
+        width: 300px;
+        height: 200px;
+        outline: 0.3em solid #A47C2A;
+        overflow: hidden;
+        margin: 1em 1.5em;
         border-radius: 0.5em;
-        margin: 0.2em;
-        width: 20em;
+    }
+
+    .croche_imgs {
+        width: 300px;
+        height: 200px;
+    }
+
+    .carrossel .croche_list {
         display: flex;
-        justify-content: center;
-        margin: 1em;
+        list-style: none;
+        width: 2700px;
+        height: 2000px;
+        
+        
+    }
+
+    @keyframes slide {
+        0%{left: 0px;}
+        5.5%{left:0px;}
+        11%{left:-300px;}
+        15.5%{left:-300px;}
+        22%{left:-600px}
+        27.5%{left:-600px;}
+        33%{left:-900px;}
+        38.5%{left:-900px;}
+        44%{left:-1200px;}
+        49.5%{left:-1200px;}
+        55%{left:-1500px;}
+        60.5%{left:-1500px;}
+        66%{left:-1800px;}
+        71.5%{left:-1800px;}
+        77%{left:-2100px;}
+        82.5%{left:-2100px;}
+        88%{left:-2400px;}
+        93.5%{left:-2400px;}
+        100%{left: 0;}
+        
     }
 
 
