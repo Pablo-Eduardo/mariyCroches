@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #363636;
-    background-image: url(/images/background/background3.jpg);
+    background-image: url(../images/background/background3.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
