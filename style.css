@@ -7,7 +7,8 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #363636;
     background-image: url(./images/background/background3.jpg);
     background-size: cover;
@@ -97,6 +98,57 @@ body {
     transform: scale(1.05);
 }
 
+#modal_img{
+    width: 50vw;
+    transform: scale(0);
+    transition: all linear .3s;
+}
+
+.modal_active #modal_img{
+    transform: scale(1);
+}
+
+.modal{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#bt_close{
+    color:#fff;
+    background-color: #000;
+    position: absolute;
+    top: 0.625em;
+    right: 0.625em;
+    padding: 0.313em 0.625em;
+    font-size: 25px;
+    border:solid 1px #fff;
+    border-radius: 25%;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+
+#bt_close:hover{
+    background-color: #f00;
+}
+
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}
 
 @media (max-width: 753px){
 
@@ -113,6 +165,12 @@ body {
         margin: 1em;
     }
 
+    #modal_img{
+        width: 85vw;
+        transform: scale(0);
+        transition: all linear .3s;
+    }
+    
 
 
 }
